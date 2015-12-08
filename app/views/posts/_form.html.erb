@@ -5,11 +5,14 @@
       <%= f.text_field(:title, class: "mdl-textfield__input") %>
     </div>
   </div>
+
   <div class="mdl-cell mdl-cell--12-col">
     <%= f.sketchily(:skech, class: "sketch-canvas") %>
   </div>
 
-  <div class="actions">
-    <%= f.submit(class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored") %>
+  <div class="mdl-cell mdl-cell--12-col">
+    <div class="actions">
+      <%= f.submit(class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored") %>
+    </div>
   </div>
 <% end %>
