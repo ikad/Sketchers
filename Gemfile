@@ -14,7 +14,6 @@ gem 'sketchily'
 gem 'thin'
 
 gem 'material_design_lite-sass'
-
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -24,7 +23,10 @@ group :development, :test do
 end
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'spring'
+  gem 'i18n_generators'
 end
 
 group :production do

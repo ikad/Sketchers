@@ -14,7 +14,9 @@
       <nav class="mdl-navigation">
         <%= link_to('トップページ', root_path, class: "mdl-navigation__link") %>
         <%= link_to('絵を描く', new_post_path, class: "mdl-navigation__link") %>
-
+        <%= link_to_if(user_signed_in?, 'ログアウト', destroy_user_session_path, class: "mdl-navigation__link") do
+              link_to('ログイン', new_user_session_path, class: "mdl-navigation__link")
+        end %>
       </nav>
     </div>
     <main class="mdl-layout__content">
