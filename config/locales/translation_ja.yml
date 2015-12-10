@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    models:
+      post: "ポスト"  #g
+      user: "ユーザー"  #g
+
+    attributes:
+      post:
+        skech: Skech  #g
+        title: "タイトル"  #g
+
+      user:
+        current_sign_in_at: "現在のサイン"  #g
+        current_sign_in_ip: IPの現在のサイン  #g
+        email: "メール"  #g
+        password: "パスワード"
+        encrypted_password: "暗号化されたパスワード"  #g
+        last_sign_in_at: "最後の記号"  #g
+        last_sign_in_ip: IPの最後の記号  #g
+        remember_created_at: "で作成されたことを覚えておいてください"  #g
+        reset_password_sent_at: "で送信されたパスワードのリセット"  #g
+        reset_password_token: "パスワードトークンをリセット"  #g
