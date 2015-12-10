@@ -15,6 +15,7 @@
 #  last_sign_in_ip        :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  role                   :string
 #
 # Indexes
 #
@@ -27,4 +28,14 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :posts
+
+  def admin?
+    self.role == "admin"
+  end
+
+  def avatar_image_url
+    "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(self.email)}?s=24"
+  end
 end

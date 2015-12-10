@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
+  before_action :set_post, only: [:show, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
   end
 
   # GET /posts/1
@@ -22,6 +22,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    @post.user_id = current_user.id if user_signed_in?
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -33,6 +35,16 @@ class PostsController < ApplicationController
     end
   end
 
+  # DELETE /posts
+  def destroy
+    if user_signed_in?
+      post = current_user.posts.find(params[:id])
+      post.destroy
+    end
+
+    redirect_to posts_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -41,6 +53,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :skech, :user_id)
+      params.require(:post).permit(:title, :skech)
     end
 end

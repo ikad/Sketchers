@@ -11,7 +11,7 @@
             <%= sketchily_show(post.skech, class: "index-card") %>
           </div>
           <div class="mdl-card__actions">
-            <span class="demo-card-image__filename"><%= post.title %></span>
+            <span class="demo-card-image__filename"><%= gravatar_tag(post.user.try(:avatar_image_url)) %> <%= post.title %></span>
           </div>
         </div>
       <% end %>

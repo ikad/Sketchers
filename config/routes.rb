@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :posts, only: [:index, :show, :new, :create]
+  resources :posts, only: [:index, :show, :new, :create, :destroy]
   devise_for :users
 
   namespace :admin do

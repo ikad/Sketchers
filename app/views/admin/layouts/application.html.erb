@@ -9,8 +9,8 @@
 <body>
   <!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title"><%= gravatar_tag(current_user.try(:avatar_image_url)) %> Sketchers</span>
+    <div class="mdl-layout__drawer admin">
+      <span class="mdl-layout-title">管理画面</span>
       <nav class="mdl-navigation">
         <%= link_to('トップページ', root_path, class: "mdl-navigation__link") %>
         <%= link_to('絵を描く', new_post_path, class: "mdl-navigation__link") %>
