@@ -6,11 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.transaction do
-  100.times do |i|
-    User.create(email: "test#{i}@test.com",
-                password: "secret",
-                password_confirmation: "secret")
-  end
-end
-
+User.delete_all
+User.create(email:                 "admin@admin.com",
+            password:              "11111111",
+            password_confirmation: "11111111",
+            role:                  "admin")
