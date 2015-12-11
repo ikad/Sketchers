@@ -13,13 +13,13 @@ $(document).ready(function(){
   editor.set("fill","none");
   editor.set("stroke-width",3);
   editor.set("stroke","black");
-})
+});
 $(window).resize(function(){
   editor.draw.setSize(c_width,c_height)
   editor.on("select", function(event,shape){
   })
-})
-$("#canvas").touchend(function(){
+});
+$("#canvas").on('touchend mouseup', function(){
   $("svg").attr("viewBox", "0 0 " + c_width + " " + c_height);
   $(".svg-data").val($("#canvas").html());
-})
+});
