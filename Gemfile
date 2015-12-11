@@ -10,7 +10,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
-gem 'sketchily'
 gem 'thin'
 
 gem 'material_design_lite-sass'
@@ -27,6 +26,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'spring'
   gem 'i18n_generators'
+  gem 'faker'
 end
 
 group :production do

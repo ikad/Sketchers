@@ -6,8 +6,10 @@
     </div>
   </div>
 
-  <div class="mdl-cell mdl-cell--12-col">
-    <%= f.sketchily(:skech, class: "sketch-canvas") %>
+  <div id="sketch_field">
+    <%= f.text_area(:skech, class: "svg-data") %>
+    <div id="canvas"></div>
+    <a onclick="editor.deleteAll()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Clear</a>
   </div>
 
   <div class="mdl-cell mdl-cell--12-col">
@@ -16,3 +18,5 @@
     </div>
   </div>
 <% end %>
+
+<%= javascript_include_tag 'sketch' %>
