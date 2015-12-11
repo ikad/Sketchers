@@ -19,7 +19,7 @@ $(window).resize(function(){
   editor.on("select", function(event,shape){
   })
 })
-$("#canvas").mousemove(function(){
+$("#canvas").touchend(function(){
   $("svg").attr("viewBox", "0 0 " + c_width + " " + c_height);
   $(".svg-data").val($("#canvas").html());
 })
