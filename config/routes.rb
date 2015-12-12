@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    resources :posts
+    resources :posts, only: [:index, :show, :destroy]
     resources :users
   end
 
