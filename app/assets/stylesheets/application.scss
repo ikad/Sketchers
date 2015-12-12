@@ -14,35 +14,61 @@
  */
  @import 'material';
 
-// インプットフィールド初期値変更
+
+// デフォルト変更
 .mdl-textfield {
   display: block;
+}
+a {
+  text-decoration: none;
 }
 
 // SVG画像表示
 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  background: white;
 }
 
 // 複数枚表示
 .image-card.mdl-card {
+  position: relative;
   width: 100%;
-  height: 37.5vh;
 
-  .mdl-card__actions {
-    height: 52px;
-    padding: 16px;
+  .image-card-svg {
+    background-color: #ccc;
+  }
+  .mdl-card__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
   }
 }
 
 // 1枚表示
 .wide-card {
+  position: relative;
   margin-top: 48px;
   width: calc(100vw - 36px);
   height: calc(100vh - 80px);
-  max-width: 640px;
-  max-height: 480px;
+
+  .wide-card-svg {
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+  }
+  .mdl-card__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+  }
 }
 
 
@@ -61,6 +87,7 @@ svg {
   }
 
   #canvas {
+    position: relative;
     border: 1px solid gray;
     max-width: 640px;
     max-height: 480px;
