@@ -14,33 +14,67 @@
  */
  @import 'material';
 
+// インプットフィールド初期値変更
 .mdl-textfield {
   display: block;
 }
 
+// SVG画像表示
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+// 複数枚表示
 .image-card.mdl-card {
   width: 100%;
-
-  img {
-    width: 100%;
-  }
+  height: 37.5vh;
 
   .mdl-card__actions {
     height: 52px;
     padding: 16px;
   }
 }
-.image-card__filename {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+
+// 1枚表示
+.wide-card {
+  margin-top: 48px;
+  width: calc(100vw - 36px);
+  height: calc(100vh - 80px);
+  max-width: 640px;
+  max-height: 480px;
 }
 
-.wide-card {
-  width: 100%;
 
-  img {
-    width: 100%;
+// お絵かき画面用
+#new_post {
+  position: relative;
+  max-width: 640px;
+
+  div.title-text-field {
+    margin: 0 0 0 48px;
+    padding: 0 0 8px;
+
+    label {
+      top: 2px;
+    }
+  }
+
+  #canvas {
+    border: 1px solid gray;
+    max-width: 640px;
+    max-height: 480px;
+    height: calc(100vh - 70px);
+  }
+
+  textarea.svg-data {
+    display: none;
+  }
+
+  input[type="submit"] {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -57,37 +91,4 @@ img.gravatar {
   width: 24px !important;
   height: 24px !important;
   margin: 0 5px;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-// お絵かき画面用
-#sketch_field {
-  position: relative;
-  border: 1px solid gray;
-  width: 640px;
-  height: 480px;
-
-  #canvas {
-    width: 640px;
-    height: 480px;
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .svg-data {
-    display: none;
-  }
-
-  a {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
 }

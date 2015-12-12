@@ -21,5 +21,5 @@ $(window).resize(function(){
 });
 $("#canvas").on('touchend mouseup', function(){
   $("svg").attr("viewBox", "0 0 " + c_width + " " + c_height);
-  $(".svg-data").val($("#canvas").html());
+  $("textarea.svg-data").val($("#canvas").html());
 });
