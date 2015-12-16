@@ -1,3 +1,13 @@
+<h1>絵を描く</h1>
+
 <div class="mdl-grid">
-  <%= render 'form' %>
+  <div class="mdl-cell mdl-cell--12-col">
+    <%= form_for(@post, html: {class: "canvas"}) do |f| %>
+      <div id="canvas"></div>
+      <%= f.text_area(:sketch, class: "svg-data") %>
+      <%= f.submit(class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored") %>
+    <% end %>
+  </div>
 </div>
+
+<%= javascript_include_tag 'sketch' %>

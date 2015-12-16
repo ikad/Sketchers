@@ -11,14 +11,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'thin'
-
 gem 'material_design_lite-sass'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'sqlite3'
-  gem 'annotate'
-  gem 'rails-erd'
 end
 
 group :development do
@@ -27,6 +25,8 @@ group :development do
   gem 'spring'
   gem 'i18n_generators'
   gem 'faker'
+  gem 'annotate'
+  gem 'rails-erd'
 end
 
 group :production do

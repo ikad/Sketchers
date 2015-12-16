@@ -1,14 +1,12 @@
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
-    <h3>イラスト一覧</h3>
-  </div>
+<h1>イラスト一覧</h1>
 
+<div class="mdl-grid">
   <% @posts.each do |post| %>
     <div class="mdl-cell mdl-cell--3-col">
       <%= link_to(post) do %>
         <div class="image-card mdl-card mdl-shadow--2dp">
           <div class="image-card-svg">
-            <%= post.skech.html_safe %>
+            <%= post.sketch.html_safe %>
           </div>
           <div class="mdl-card__title">
             <div class="mdl-card__title-text"><%= gravatar_tag(post.user.try(:avatar_image_url)) %> <%= post.title %></div>

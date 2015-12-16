@@ -6,7 +6,7 @@ ja:
 
     attributes:
       post:
-        skech: Skech  #g
+        sketch: Sketch  #g
         title: "タイトル"  #g
 
       user:

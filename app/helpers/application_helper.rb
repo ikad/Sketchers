@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def gravatar_tag(url="test@example.com")
-    image_tag(url, class: "gravatar")
+  def gravatar_tag(url)
+    image_tag(url, class: "gravatar") if url
   end
 end

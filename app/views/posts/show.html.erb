@@ -1,11 +1,10 @@
+<h1><%= gravatar_tag(@post.user.try(:avatar_image_url)) %> <%= @post.title %></h1>
+
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--12-col">
-    <div class="wide-card mdl-card mdl-shadow--2dp">
-      <div class="wide-card-svg">
-        <%= @post.skech.html_safe %>
-      </div>
-      <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text"><%= gravatar_tag(@post.user.try(:avatar_image_url)) %> <%= @post.title %></h2>
+    <div class="big-card mdl-card mdl-shadow--2dp">
+      <div class="big-card-svg">
+        <%= @post.sketch.html_safe %>
       </div>
       <div class="mdl-card__menu">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
